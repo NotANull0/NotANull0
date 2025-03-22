@@ -1,0 +1,86 @@
+.popup-wrapper {
+  @apply fixed top-4 left-1/2 -translate-x-1/2 space-y-2;
+  @apply w-full;
+  z-index: 100;
+  width: min(100% - 3rem, 28rem);
+}
+
+.popup {
+  @apply relative;
+  @apply text-neutral-50;
+  @apply pointer-events-auto;
+  @apply p-3 mx-auto max-h-min;
+  @apply font-semibold text-sm leading-4;
+  @apply border-none rounded-none shadow-lg;
+  @apply flex items-center justify-between;
+  @apply transition-all duration-500 ease-in-out;
+  z-index: 100;
+}
+
+.popup span {
+  @apply -translate-y-[1px];
+}
+
+.popup > button {
+  @apply bg-transparent rounded-none;
+  @apply p-0 h-auto w-auto min-h-0 min-w-0;
+  @apply aspect-square shadow-none hover:shadow-none;
+}
+
+.popup-green {
+  @apply bg-green-600 hover:bg-green-700;
+}
+
+.popup-blue {
+  @apply bg-blue-600 hover:bg-blue-700;
+}
+
+.popup-red {
+  @apply bg-red-600 hover:bg-red-700;
+}
+
+.popup-yellow {
+  @apply bg-yellow-600 hover:bg-yellow-700;
+}
+
+.slide-in {
+  animation: slide-in 0.55s ease-in-out;
+}
+
+.slide-out {
+  animation: slide-out 0.55s ease-in-out;
+}
+
+@keyframes slide-in {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-out {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+}
+
+.popup-progress {
+  @apply absolute bottom-0 left-0 h-1 w-full;
+  @apply bg-black/10;
+}
+
+.popup-progress-bar {
+  @apply h-full w-full bg-black/20;
+  transition: width 200ms ease;
+}

@@ -1,0 +1,255 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --min-container-size-sm-screen: calc(100% - 3rem);
+    --min-container-size-lg-screen: calc(100% - 6rem);
+    --min-container-size-xl-screen: calc(100% - 8rem);
+
+    --container-size-xs: min(var(--min-container-size-sm-screen),
+        24rem);
+    --container-size-sm: min(var(--min-container-size-sm-screen),
+        32rem);
+
+    --container-size-md: min(var(--min-container-size-lg-screen),
+        40rem);
+    --container-size-lg: min(var(--min-container-size-lg-screen),
+        48rem);
+
+    --container-size-xl: min(var(--min-container-size-xl-screen),
+        56rem);
+    --container-size-2xl: min(var(--min-container-size-xl-screen),
+        64rem);
+
+    --container-size-3xl: min(var(--min-container-size-xl-screen),
+        72rem);
+    --container-size-4xl: min(var(--min-container-size-xl-screen),
+        78rem);
+  }
+
+  ::selection {
+    @apply bg-primary-500/40 text-neutral-50;
+  }
+
+  ::-moz-selection {
+    @apply bg-primary-500/40 text-neutral-50;
+  }
+
+  html {
+    @apply scroll-smooth scroll-p-5;
+    @apply bg-neutral-950;
+    scrollbar-width: thin;
+  }
+
+  body {
+    @apply text-neutral-100 bg-neutral-950 min-h-screen;
+    @apply text-base font-thin tracking-normal leading-normal;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%23202020' fill-opacity='.5'%3E%3Cpath opacity='.25' d='M96 95h4v1h-4v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9zm-1 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9z'/%3E%3Cpath d='M6 5V0H5v5H0v1h5v94h1V6h94V5H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-normal text-neutral-100 mx-auto;
+    @apply text-balance text-center tracking-wide leading-snug;
+    max-width: var(--container-size-xs);
+  }
+
+  h1 {
+    @apply text-4xl pt-6 pb-2;
+  }
+
+  h2 {
+    @apply text-3xl pt-4 pb-2;
+  }
+
+  h3 {
+    @apply text-2xl pt-3 pb-2;
+  }
+
+  h4 {
+    @apply text-xl pt-3 pb-2;
+  }
+
+  p,
+  ul {
+    @apply mx-auto text-neutral-100 text-left;
+    @apply text-pretty text-base font-thin;
+    max-width: var(--container-size-xs);
+  }
+
+  p:has(+ p) {
+    @apply mb-4;
+  }
+
+  ul {
+    @apply mt-1 mb-3;
+  }
+
+  li {
+    @apply ml-6 list-disc;
+  }
+
+  /* Scrollbar */
+
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+    /* Chrome, Safari and Opera */
+  }
+
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+  }
+
+  .scroll-smooth {
+    scroll-behavior: smooth;
+  }
+
+  /* Links and Anchor Headings */
+
+  a,
+  .link {
+    @apply text-primary-500 hover:text-primary-400;
+    @apply transition duration-300 ease-in-out;
+    @apply relative;
+
+    text-decoration: none !important;
+  }
+
+  a::after,
+  .link::after {
+    @apply absolute bg-primary-400;
+    @apply bottom-0.5 left-1/2 -translate-x-1/2;
+    @apply w-0;
+    content: "";
+    transition: width 400ms ease-in;
+    height: 1px;
+  }
+
+  a:hover::after,
+  .link:hover::after {
+    @apply w-full;
+  }
+
+  /* Layout */
+
+  .container-xs {
+    @apply mx-auto;
+    max-width: var(--container-size-xs);
+  }
+
+  .container-sm {
+    @apply mx-auto;
+    max-width: var(--container-size-sm);
+  }
+
+  .container-md {
+    @apply mx-auto;
+    max-width: var(--container-size-md);
+  }
+
+  .container-lg {
+    @apply mx-auto;
+    max-width: var(--container-size-lg);
+  }
+
+  .container-xl {
+    @apply mx-auto;
+    max-width: var(--container-size-xl);
+  }
+
+  .container-2xl {
+    @apply mx-auto;
+    max-width: var(--container-size-2xl);
+  }
+
+  .container-3xl {
+    @apply mx-auto;
+    max-width: var(--container-size-3xl);
+  }
+
+  .container-4xl {
+    @apply mx-auto;
+    max-width: var(--container-size-4xl);
+  }
+
+  .full-screen-container {
+    @apply min-w-full;
+    min-height: calc(100vh - 4rem);
+  }
+
+  /* Card */
+
+  div.card {
+    @apply bg-neutral-900;
+    @apply w-full max-w-sm;
+    @apply px-6 py-4;
+    @apply rounded-none transition-shadow duration-500;
+    @apply shadow-lg shadow-black/50;
+  }
+
+  /* Text */
+
+  .text-red {
+    @apply text-red-500 font-normal text-base;
+  }
+
+  .text-green {
+    @apply text-green-500 font-normal text-base;
+  }
+
+  .text-blue {
+    @apply text-blue-500 font-normal text-base;
+  }
+
+  /* Input */
+
+  label {
+    @apply text-base;
+  }
+
+  input {
+    @apply w-full px-2.5 py-1.5 m-0;
+    @apply text-base bg-neutral-950;
+    @apply border-2 border-neutral-700 focus:border-neutral-400;
+    @apply overflow-x-auto overflow-y-hidden;
+    @apply block rounded-none outline-none;
+    @apply duration-500 ease-in-out;
+
+    transition-property: border-color, box-shadow,
+      background-color;
+    flex-grow: 1000;
+  }
+
+  /* Table */
+
+  table {
+    @apply mx-auto my-4;
+    width: var(--container-size-md);
+    border-collapse: collapse;
+  }
+
+  table th,
+  table td {
+    @apply border border-neutral-400;
+    @apply px-3 py-2 text-left;
+  }
+
+  table th {
+    @apply bg-neutral-950 text-neutral-100 font-normal;
+  }
+
+  table tr:nth-child(odd) {
+    @apply bg-neutral-900;
+  }
+
+  table tr:nth-child(even) {
+    @apply bg-neutral-800;
+  }
+}

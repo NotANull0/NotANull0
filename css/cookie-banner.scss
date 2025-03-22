@@ -1,0 +1,29 @@
+#cookie-wrapper {
+  @apply fixed w-full h-fit z-50 bottom-0 text-neutral-950;
+  @apply duration-700 transition-transform;
+  @apply motion-reduce:transition-none;
+}
+
+#cookie-banner {
+  @apply py-4 mx-auto mb-4 bg-neutral-950;
+  @apply rounded-none shadow-lg;
+
+  max-width: min(100vw - 2rem, 30rem);
+}
+
+#cookie-banner p {
+  @apply text-xs;
+}
+
+#cookie-banner button {
+  @apply scale-[0.8] origin-center;
+}
+
+#cookie-banner > div {
+  @apply mt-4 grid grid-rows-1 px-6;
+  grid-template-columns: 1fr 10vw 1fr;
+}
+
+#cookie-banner > div button:last-child {
+  grid-column-start: 3;
+}

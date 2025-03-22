@@ -1,0 +1,41 @@
+dialog {
+  @apply modal;
+}
+
+div.modal-box {
+  @apply bg-neutral-900 rounded-none;
+  @apply shadow-sm shadow-neutral-900;
+}
+
+.modal-box h3 {
+  @apply mt-0 pt-0;
+}
+
+.modal-box p {
+  @apply text-center text-pretty;
+}
+
+.modal-box .modal-options {
+  @apply mt-6 grid grid-rows-1;
+  grid-template-columns: 1fr 8vw 1fr;
+}
+
+.modal-box .modal-options > button {
+  @apply col-start-3;
+}
+
+.modal-box .modal-options form[method="dialog"] {
+  @apply flex flex-grow;
+}
+
+.modal-box .modal-options form[method="dialog"] button {
+  @apply min-w-full;
+}
+
+.modal .modal-backdrop {
+  backdrop-filter: blur(1px);
+}
+
+.modal .modal-backdrop button {
+  all: unset;
+}

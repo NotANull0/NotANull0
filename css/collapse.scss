@@ -1,0 +1,21 @@
+.collapse {
+  @apply rounded-none mx-auto duration-500 ease-out;
+  width: min(100% - 3rem, 33rem);
+}
+
+.collapse-title {
+  @apply text-neutral-100 bg-neutral-900 rounded-none;
+  @apply text-xl font-semibold max-h-none h-10;
+}
+
+.collapse-content {
+  @apply text-neutral-200 bg-neutral-800;
+  @apply px-4 overflow-hidden;
+  @apply motion-reduce:transition-none;
+
+  transition: visibility 300ms ease;
+}
+
+.collapse-content p {
+  @apply mx-0 pt-4 max-w-full;
+}

@@ -1,0 +1,28 @@
+.board {
+  @apply flex flex-row gap-x-2;
+  @apply text-sm p-2 my-3;
+}
+
+.board-icon {
+  @apply text-2xl leading-4;
+}
+
+.board-content {
+  @apply grid place-items-center;
+}
+
+.board-error {
+  @apply bg-red-600/70;
+}
+
+.board-success {
+  @apply bg-green-600/70;
+}
+
+.board-info {
+  @apply bg-sky-600/70;
+}
+
+.board-warn {
+  @apply bg-yellow-600/70;
+}

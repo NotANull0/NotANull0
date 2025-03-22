@@ -1,0 +1,37 @@
+{
+  "name": "mgr",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@next/third-parties": "^15.1.3",
+    "axios": "^1.7.9",
+    "cookies-next": "^5.1.0",
+    "daisyui": "^4.12.22",
+    "dompurify": "^3.2.4",
+    "jose": "^6.0.4",
+    "next": "^15.1.6",
+    "react": "^19.0.0",
+    "react-cookie-consent": "^9.0.0",
+    "react-dom": "^19.0.0",
+    "react-icons": "^5.4.0",
+    "sass": "^1.83.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^8",
+    "eslint-config-next": "^15.1.6",
+    "postcss": "^8.4.49",
+    "postcss-simple-vars": "^7.0.1",
+    "tailwindcss": "^3.4.16",
+    "typescript": "^5"
+  }
+}

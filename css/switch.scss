@@ -1,0 +1,86 @@
+.switch-wrapper {
+  @apply grid gap-x-4 mb-6 mr-2;
+  grid-template-columns: 1fr max-content;
+  --_size: 20px;
+}
+
+.switch-wrapper .switch {
+  @apply relative cursor-pointer;
+  @apply -translate-y-1/2 top-1/2;
+
+  width: calc(2 * var(--_size) - 8px);
+  height: calc(var(--_size) - 6px);
+}
+
+.switch-wrapper .switch-label {
+  @apply w-fit block;
+}
+
+.switch-wrapper .switch-input {
+  @apply absolute w-full h-full opacity-0 cursor-pointer;
+  z-index: 2;
+}
+
+.switch-wrapper .switch-track {
+  @apply absolute inset-0 bg-neutral-600;
+  @apply shadow-md shadow-neutral-600/25;
+  @apply duration-200;
+
+  transition-property: color, background-color, shadow;
+}
+
+.switch-wrapper .switch-knob {
+  @apply bg-neutral-200;
+  @apply shadow-md shadow-black/50;
+  @apply absolute inset-[-3px];
+  @apply translate-x-0;
+
+  width: var(--_size);
+  height: var(--_size);
+  transition: transform 300ms cubic-bezier(0.7, 0, 0.3, 1.5);
+}
+
+.switch-wrapper .switch-knob .switch-knob-icon {
+  @apply text-neutral-400 rotate-90 w-full h-full;
+  @apply transition-colors duration-200;
+}
+
+.switch-wrapper .switch-input:checked ~ .switch-track {
+  @apply bg-sky-500 shadow-md shadow-sky-500/25;
+}
+
+.switch-wrapper
+  .switch-input:checked
+  ~ .switch-track
+  .switch-knob
+  .switch-knob-icon {
+  @apply text-sky-400;
+}
+
+.switch-wrapper
+  .switch-input:checked
+  ~ .switch-track
+  .switch-knob {
+  transform: translateX(calc(100% - 2px));
+}
+
+.switch-wrapper
+  .switch-input:focus-visible
+  ~ .switch-track {
+  @apply ring-2 ring-neutral-100;
+}
+
+.switch-wrapper .switch-input:disabled {
+  @apply cursor-not-allowed;
+}
+
+.switch-wrapper .switch-input:disabled ~ .switch-track {
+  @apply bg-neutral-600;
+}
+
+.switch-wrapper
+  .switch-input:disabled
+  ~ .switch-track
+  .switch-knob {
+  @apply bg-neutral-400;
+}

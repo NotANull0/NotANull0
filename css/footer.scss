@@ -1,0 +1,27 @@
+#footer {
+  @apply bg-neutral-900 text-sm;
+  @apply mt-8 p-4;
+  @apply flex flex-col gap-3;
+}
+
+#footer p {
+  @apply text-center w-max;
+  margin: 0 auto;
+  padding: 0;
+}
+
+#footer > div {
+  @apply grid grid-cols-2 grid-rows-1 gap-x-0 gap-y-2;
+  @apply mx-auto mt-2;
+
+  width: var(--min-container-size-small-screen);
+}
+
+#footer .link {
+  @apply text-neutral-100 hover:text-neutral-50 no-underline;
+  @apply mx-auto duration-0;
+}
+
+#footer .link::after {
+  @apply bg-neutral-50;
+}

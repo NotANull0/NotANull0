@@ -1,0 +1,48 @@
+.dropdown-wrapper {
+  @apply relative inline-block text-left;
+}
+
+.dropdown-button {
+  @apply inline-flex justify-center w-full gap-3;
+}
+
+.dropdown-option-wrapper {
+  @apply origin-top absolute left-0 mt-2 w-28;
+  @apply rounded-none shadow-lg bg-neutral-50;
+  @apply invisible opacity-0 z-50;
+  transition-behavior: allow-discrete;
+  transition: opacity 400ms ease,
+    visibility 400ms ease-in-out;
+}
+
+.dropdown-option-wrapper.open {
+  @apply visible opacity-100;
+}
+
+.dropdown-option-wrapper .dropdown-option {
+  @apply flex justify-between items-center px-4 py-2 w-28;
+  @apply text-sm font-medium cursor-pointer;
+  @apply motion-reduce:transition-none;
+  @apply text-gray-700 hover:bg-neutral-200;
+  @apply invisible opacity-0;
+  transition-behavior: allow-discrete;
+  transition: opacity 300ms ease-in-out,
+    transform 300ms ease-in-out,
+    visibility 300ms ease-in-out;
+
+  @for $i from 1 through 15 {
+    &:nth-child(#{$i}) {
+      transform: translateY(-100%);
+      transition-delay: $i * 50ms;
+    }
+  }
+}
+
+.dropdown-option-wrapper.open .dropdown-option {
+  @apply visible opacity-100;
+  transform: translateY(0);
+}
+
+.dropdown-icon {
+  @apply justify-self-end text-xl text-blue-800;
+}
