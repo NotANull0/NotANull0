@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useState, useEffect } from "react";
 import config from "@/config";
+import Btn from "@/components/Btn";
 import "@/css/cookie-banner.scss";
 
 function updateConsent(status) {
@@ -71,18 +72,18 @@ export default function CookieBanner() {
           services please allow the use of cookies.
         </p>
         <div>
-          <button
+          <Btn
             className="btn-red"
             onClick={handleDecline}
           >
             Decline
-          </button>
-          <button
+          </Btn>
+          <Btn
             className="btn-green"
             onClick={handleAccept}
           >
             Accept
-          </button>
+          </Btn>
         </div>
       </div>
     </div >

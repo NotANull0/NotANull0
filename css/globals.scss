@@ -30,11 +30,11 @@
   }
 
   ::selection {
-    @apply bg-primary-500/40 text-neutral-50;
+    @apply bg-blue-500/40 text-neutral-50;
   }
 
   ::-moz-selection {
-    @apply bg-primary-500/40 text-neutral-50;
+    @apply bg-blue-500/40 text-neutral-50;
   }
 
   html {
@@ -115,7 +115,7 @@
 
   a,
   .link {
-    @apply text-primary-500 hover:text-primary-400;
+    @apply text-blue-500 hover:text-blue-400;
     @apply transition duration-300 ease-in-out;
     @apply relative;
 
@@ -124,7 +124,7 @@
 
   a::after,
   .link::after {
-    @apply absolute bg-primary-400;
+    @apply absolute bg-blue-400;
     @apply bottom-0.5 left-1/2 -translate-x-1/2;
     @apply w-0;
     content: "";
